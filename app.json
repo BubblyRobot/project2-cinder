@@ -1,0 +1,8 @@
+{
+  "name": "Cinder",
+  "description": "A Coding Friend Finder",
+  "repository": "https://github.com/BubblyRobot/project2-cinder",
+  "logo": "",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
