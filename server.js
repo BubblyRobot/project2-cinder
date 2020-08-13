@@ -7,12 +7,10 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
-
 var passport   = require('./config/passport')
 var session    = require('express-session')
 
 
-app.listen(process.env.PORT);
  
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
  
