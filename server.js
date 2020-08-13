@@ -12,6 +12,7 @@ var passport   = require('./config/passport')
 var session    = require('express-session')
 
 
+app.listen(process.env.PORT);
  
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
  
