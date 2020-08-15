@@ -2,15 +2,18 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Cinder Login Page</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"> -->
+  <!-- <link href="stylesheets/style.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/login.css">
+
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
+  <!-- <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
       </div>
@@ -37,8 +40,32 @@
         <p>Or sign up <a href="/">here</a></p>
       </div>
     </div>
-  </div>
-
+  </div> -->
+	<div class="container" id="container">
+		<div class="form-container log-in-container">
+			<form action="#">
+				<span>Not a Member Yet ?<a href="registration.html"><br>Sign UP</a></span>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fa fa-google fa-2x"></i></a>
+					<a href="#" class="social"><i class="fab fa fa-github fa-2x"></i></a>
+				</div>
+				<span>or use your account</span>
+				<input type="email" class="form-control" id="email-input" placeholder="Email" />
+				<input type="password" class="form-control" id="password-input" placeholder="Password" />
+				<a href="#">Forgot your password?</a>
+				<button id="save" type="button">Log In</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h5>WELCOME TO</h5>
+					<h1>Cinder</h1>
+					<p>This app is social platform for young coders on github from every part of the world</p>
+				</div>
+			</div>
+		</div>
+	</div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
 
