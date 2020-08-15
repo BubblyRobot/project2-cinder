@@ -19,5 +19,6 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/promptPage.html"));
   });
   // cms route loads cms.html
+  // for Profile page with handlebars instead of sending file it will be another function with referensing to handlebars
 
 };
