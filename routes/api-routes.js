@@ -11,7 +11,7 @@ module.exports = function(app) {
 
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
     
-    console.log('we thit he route')
+    console.log('we hit this route')
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
@@ -31,7 +31,11 @@ module.exports = function(app) {
           res.status(401).json(err);
         });
   });
-
+  // Route for logging user out
+  app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/");
+  });
   // cms route loads cms.html
 
 };
