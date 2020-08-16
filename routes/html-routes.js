@@ -1,4 +1,5 @@
 var path = require("path");
+const db = require("../models");
 
 // Routes
 // =============================================================
@@ -8,17 +9,28 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/welcomePage.html"));
+    res.sendFile(path.join(__dirname, "../public/loginPage.html"));
   });
 
   app.get("/login", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/loginPage.html"));
   });
   
-  app.get("/prompt", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/promptPage.html"));
+  app.get("/signup", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
-  // cms route loads cms.html
-  // for Profile page with handlebars instead of sending file it will be another function with referensing to handlebars
-
+  app.get("/questionnaire", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/questionnaire.html"));
+  });
+  app.get("/profilepage", function(req, res) {
+    // res.render(path.join(__dirname, "../views/layouts/main.handlebars"));
+    db.User.findAll({}).then(
+    function(data) {
+      var hbsObject = {
+        users: data
+      };
+      console.log(hbsObject);
+      res.render("index", hbsObject);
+    });
+  });
 };
