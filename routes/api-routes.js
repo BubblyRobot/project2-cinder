@@ -21,6 +21,9 @@ module.exports = function(app) {
 
   app.post("/signup", function(req, res) {
     db.User.create({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        nickname: req.body.nickname,
         email: req.body.email,
         password: req.body.password
       })
