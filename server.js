@@ -8,9 +8,10 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
-var passport   = require('./config/passport')
-var session    = require('express-session')
+var passport   = require('./config/passport');
+var session    = require('express-session');
 var exphbs = require("express-handlebars");
+var bodyParser = require("body-parser");
 
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
  
@@ -33,8 +34,8 @@ require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
 // using controllers for routes
-var routes = require("./controllers/profilePage_controller.js");
-app.use(routes);
+// var routes = require("./controllers/profilePage_controller.js");
+// app.use(routes);
 
 // handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));

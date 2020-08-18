@@ -1,49 +1,56 @@
+</html>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <title>Passport Authentication</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"> -->
-  <!-- <link href="stylesheets/style.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="./css/signup.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>CINDER SIGNUP PAGE</title>
 </head>
-
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
-        <form class="signup">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
-        </form>
-        <br />
-        <p>Or log in <a href="/login">here</a></p>
-      </div>
-    </div>
+	<div class="container" id="container">
+		<div class="form-container log-in-container">
+			<form action="#" class="signup">
+        <span>Sign up using this form:</span>
+        <div class="form-group">
+          <input type="name" placeholder="Enter Your Name" />
+        </div>
+        <div class="form-group">
+          <input type="last-name" placeholder="Enter Your Last Name" />
+        </div>
+        <div class="form-group">
+          <input type="nickname" placeholder="Choose a Nick Name" />
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="email-input" placeholder="Enter Your Email" />
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="password-input" placeholder="Enter your password" />
+        </div>
+        <!-- <div class="form-group">
+          <input type="Confirm password" placeholder="Confirm your password" />
+        </div> -->
+        <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span> <span class="msg"></span>
+        </div>
+				<button type="submit"class="btn btn-default">Sign Up</button> 
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h5>SIGN UP TO</h5>
+					<h1>Cinder</h1>
+					<p>No #1 app for young programmers and coders. joing us and connect with many enthusiastic programmers from around the world</p>
+				</div>
+			</div>
+		</div>
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="./js/signup.js"></script>
 
 </body>
-
 </html>
+

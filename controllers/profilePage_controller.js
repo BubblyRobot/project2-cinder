@@ -15,6 +15,7 @@ router.get("/", function(req, res) {
         users: data
       };
       console.log(hbsObject);
+      console.log("From controllers folder");
       res.render("index", hbsObject);
     })
     .catch(err => console.log(err));
