@@ -4,7 +4,11 @@
 * {
 	box-sizing: border-box;
 }
-
+#logo{
+	width:150px;
+    height:150px;
+    background-repeat: no-repeat;
+}
 body {
 	background: #f3e0e2;
 	display: flex;
