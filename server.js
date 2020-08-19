@@ -6,6 +6,10 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+//Added Code here for Chat App susan added
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
 // Requiring our models for syncing
 var db = require("./models");
 var passport   = require('./config/passport');
@@ -27,6 +31,24 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
+
+//Sockets Stuff goes here
+io.sockets.on('connection', function(socket) {
+  socket.on('username', function(username) {
+      socket.username = username;
+      io.emit('is_online', '🔵 <i>' + socket.username + ' join the chat..</i>');
+  });
+
+  socket.on('disconnect', function(username) {
+      io.emit('is_online', '🔴 <i>' + socket.username + ' left the chat..</i>');
+  })
+
+  socket.on('chat_message', function(message) {
+      io.emit('chat_message', '<strong>' + socket.username + '</strong>: ' + message);
+  });
+
+});
+
 
 // Routes
 // =============================================================
