@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="./Quesionaire.css">
+	<link rel="stylesheet" href="./css/Quesionaire.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
@@ -186,14 +186,19 @@
 					<option value="1900">1900</option>
 				  </select>
 				  <div>
+					<br>
+					</div>
+					  <br>
 					<label for="phone">Enter your phone number:</label>
 					<input type="tel" id="phone" name="phone"
 						   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
 						   required>
 					<small>Format: 123-456-7890</small>
+					
 					<input type="Work Place" placeholder="Work Place" />
+
 					<select id="job" name="user_job">
-					<label for="job">Job Role:</label>
+					<label for="job" style=>Job Role:</label>
 						<optgroup label="Web">
 							<option value="job-role">Job Role</option>
 							<option value="frontend_developer">Front-End Developer</option>
@@ -243,43 +248,44 @@
 					<option value="19">19</option>
 					<option value="20">20</option>
 			</div>
-			
-				<div class="sch-style-5">
-					<div class="sch-style-title">Select Your Gender :</div>
-					<div class="sch-radio">
-						<div class="sch-title-item">
-						</div>
-						<input type="radio" id="radio-5-1" name="sch-radio-item-5" class="sch-radio-item-input-style-5">
-						<label for="radio-5-1" class="sch-radio-item-label-style-5">Male</label>
-						<input type="radio" id="radio-5-2" name="sch-radio-item-5" class="sch-radio-item-input-style-5">
-						<label for="radio-5-2" class="sch-radio-item-label-style-5">Female</label>
-					</div>
-					<div class="sch-checkbox">
-						<div class="sch-title-item">Select Programming Languages You Know :</div>
-						<div class="sch-item-full">
-							<span class="sch-item-size">
-								<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-								<label for="checkbox-5-3" class="sch-checkbox-item-label-style-5">C++</label>
-								<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-								<label for="checkbox-5-3" class="sch-checkbox-item-label-style-5">Javascript</label>
-								<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-								<label for="checkbox-5-3" class="sch-checkbox-item-label-style-5">Python</label>
-								<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-								<label for="checkbox-5-3" class="sch-checkbox-item-label-style-5">UI/UX</label>
-								<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-								<label for="checkbox-5-3" class="sch-checkbox-item-label-style-5">CSS</label>
-								<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-								<label for="checkbox-5-3" class="sch-checkbox-item-label-style-5">HTML</label>
-							</span>
-						</div>
-					</div>
+
+			<label class="container-ch"></label>
+				<input type="checkbox">
+			  <p>Select programming language you know :</p>
+			         <label class="container-ch">C++
+			     	 <input type="checkbox">
+			     	 <span class="checkmark"></span>
+			          </label>
+					  <label class="container-ch">Javascript
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					  </label>
+					  <label class="container-ch">Python
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					  </label>
+					  <label class="container-ch">UI/UX
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					  </label>
+					  <label class="container-ch">PHP
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					  </label>
+					  <label class="container-ch">MYSQL
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					  </label>
 				</div>
+				<br>
 				<button type="button">UPDATE</button> 
 			  </div>
+			</label>
 		<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-panel overlay-right">
-					<h3>UPDATE PROFILE INFORMATION</h3>
+					<h4>UPDATE PROFILE INFORMATION</h4>
+				
 					<h1>Cinder</h1>
 					<p>No #1 app for young programmers and coders. joing us and connect with many enthusiastic programmers from around the world</p>
 				</div>
