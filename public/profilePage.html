@@ -21,14 +21,17 @@
 
 	<!-- Pure CSS -->
 
-	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous"> -->
 
-	<!-- Pure CSS repsonsive Grid system-->
-	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
+	<!-- Bulma-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
 
 	<!-- Main Styles CSS -->
+	
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.min.css">
+	<link rel="stylesheet" type="text/css" href="css/profilePage.css">
+	
 
 
 </head>
@@ -1906,60 +1909,61 @@
 </div>
 
 <!-- ... end Top Header-Profile -->
+
+
+
+	<!-- Main Content -->
 <div class="container">
 	<div class="row">
-
-		<!-- Main Content -->
-
-		<div class="col col-xl-6 order-xl-2 col-lg-12 order-lg-1 col-md-12 col-sm-12 col-12">
-			<div id="newsfeed-items-grid">
-
-
-			</div>
-		</div>
-
-		<!-- ... end Main Content -->
-
-
-		<!-- Left Sidebar -->
-
-		<div class="col col-xl-3 order-xl-1 col-lg-6 order-lg-2 col-md-6 col-sm-6 col-12">
-
-			<div class="ui-block">
-				<div class="ui-block-title">
-					<h6 class="title">Profile Intro</h6>
+		<div class="tile is-ancestor">
+			<div class="tile is-vertical is-8">
+			  <div class="tile">
+				<div class="tile is-parent is-vertical">
+				  <article class="tile is-child notification is-primary">
+					<p class="title">About Me .</p>
+					<p class="subtitle">Section 1</p>
+				  </article>
+				  <article class="tile is-child notification is-warning">
+					<p class="title">About me</p>
+					<p class="subtitle">Section 2</p>
+				  </article>
 				</div>
-				<div class="ui-block-content">
-
-					<!-- W-Personal-Info -->
-					
-					<ul class="widget w-personal-info item-block">
-						<li>
-							<span class="title">About Me:</span>
-							<span class="text">Hi, I’m James, I’m 36 and I work as a Digital Designer for the  “Daydreams” Agency in Pier 56.</span>
-						</li>
-						<li>
-							<span class="title">Favourite TV Shows:</span>
-							<span class="text">Breaking Good, RedDevil, People of Interest, The Running Dead, Found,  American Guy.</span>
-						</li>
-						<li>
-							<span class="title">Favourite Music Bands / Artists:</span>
-							<span class="text">Iron Maid, DC/AC, Megablow, The Ill, Kung Fighters, System of a Revenge.</span>
-						</li>
-					</ul>
-					
-					<!-- .. end W-Personal-Info -->
-
+				<div class="tile is-parent">
+				  <article class="tile is-child notification is-info">
+					<p class="title">Tylers API</p>
+					<p class="subtitle">With an image</p>
+					<figure class="image is-4by3">
+					  <img src="https://bulma.io/images/placeholders/640x480.png">
+					</figure>
+				  </article>
 				</div>
+			  </div>
+			  <div class="tile is-parent">
+				<article class="tile is-child notification is-danger">
+				  <p class="title">Chat for now</p>
+				  <p class="subtitle">Placeholder</p>
+				  <div class="content">
+					<!-- Content -->
+				  </div>
+				</article>
+			  </div>
 			</div>
-
-		</div>
-
-		<!-- ... end Right Sidebar -->
+			<div class="tile is-parent">
+			  <article class="tile is-child notification is-success">
+				<div class="content">
+				  <p class="title">Links to Bootcamps</p>
+				  <p class="subtitle">And links to coding camps</p>
+				  <div class="content">
+					<!-- Content -->
+				  </div>
+				</div>
+			  </article>
+			</div>
+		  </div>
 
 	</div>
 </div>
-
+<!-- End main content  -->
 
 
 <a class="back-to-top" href="#">
