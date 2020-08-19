@@ -73,3 +73,7 @@ db.sequelize.sync({ force: true }).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+const server = http.listen(8081, function() {
+  console.log('listening on *:8081');
+});

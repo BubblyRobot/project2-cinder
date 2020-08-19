@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:8080');
+var socket = io.connect('http://localhost:8081');
       // submit text message without reload/refresh the page
       $('form').submit(function(e){
           e.preventDefault(); // prevents page reloading
