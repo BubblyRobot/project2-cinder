@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 
+node_modules/
+
 ### Node ###
 # Logs
 logs
@@ -114,3 +116,9 @@ dist
 
 
 .DS_Store
+
+public/.DS_Store
+
+package-lock.json
+
+package.json
