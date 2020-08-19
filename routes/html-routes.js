@@ -22,8 +22,15 @@ module.exports = function(app) {
   app.get("/questionnaire", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/questionnaire.html"));
   });
+
+  app.get("/chatroom", function(req,res){
+    res.sendFile(path.join(__dirname, "../public/chatroom.html"));
+  })
+
   app.get("/profilepage", function(req, res) {
     // res.render(path.join(__dirname, "../views/layouts/main.handlebars"));
+    res.sendFile(path.join(__dirname, "../public/profilePage.html"));
+
     db.User.findAll({}).then(
     function(data) {
       var hbsObject = {
