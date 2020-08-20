@@ -7,8 +7,13 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 //Added Code here for Chat App susan added
+
+// app is an express app, do what you usually do with express
+
 const http = require('http').Server(app);
+
 const io = require('socket.io')(http);
+
 
 // Requiring our models for syncing
 var db = require("./models");
