@@ -9,14 +9,23 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
+    if (req.user) {
+      res.redirect("/profilepage");
+    }
     res.sendFile(path.join(__dirname, "../public/loginPage.html"));
   });
 
   app.get("/login", function(req, res) {
+    if (req.user) {
+      res.redirect("/profilepage");
+    }
     res.sendFile(path.join(__dirname, "../public/loginPage.html"));
   });
   
   app.get("/signup", function(req, res) {
+    if (req.user) {
+      res.redirect("/profilepage");
+    }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
   app.get("/questionnaire", function(req, res) {
@@ -29,7 +38,7 @@ module.exports = function(app) {
 
   app.get("/profilepage", function(req, res) {
     // res.render(path.join(__dirname, "../views/layouts/main.handlebars"));
-    res.sendFile(path.join(__dirname, "../public/profilePage.html"));
+    // res.sendFile(path.join(__dirname, "../public/profilePage.html"));
 
     db.User.findAll({}).then(
     function(data) {
