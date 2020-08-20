@@ -6,6 +6,7 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+
 //Added Code here for Chat App susan added
 
 // app is an express app, do what you usually do with express
@@ -66,6 +67,8 @@ require("./routes/html-routes.js")(app);
 
 // handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// Public Views
+
 app.set("view engine", "handlebars");
 
 // set static folder
