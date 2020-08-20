@@ -34,6 +34,33 @@ module.exports = function(app) {
           res.status(401).json(err);
         });
   });
+
+  // route to get users list
+  app.get("/api/authors", function(req, res) {
+    // Here we add an "include" property to our options in our findAll query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Post
+    db.Author.findAll({
+      include: [db.Post]
+    }).then(function(dbAuthor) {
+      res.json(dbAuthor);
+    });
+  });
+
+  // route for rendering one specific user
+  app.get("/api/users/:id", function(req, res) {
+
+    db.User.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbUser) {
+      res.json(dbUser);
+    }).catch(err => {
+      console.log(err);
+    });
+  });
+
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
