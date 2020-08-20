@@ -1,10 +1,15 @@
 var express = require("express");
 var path = require("path");
+// if(process.env.NODE_ENV !== "production"){
+//   require('dotenv').config(); 
+// } 
+
 
 // Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
+
 
 //Added Code here for Chat App susan added
 
@@ -66,6 +71,8 @@ require("./routes/html-routes.js")(app);
 
 // handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// Public Views
+
 app.set("view engine", "handlebars");
 
 // set static folder
