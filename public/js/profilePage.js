@@ -40,4 +40,12 @@ let bootCamps = [
     link: "https://coderacademy.edu.au/?utm_source=coursereport&utm_medium=schoolpage"
 }
 ]
+$(document).ready(function() {
 
+    $.ajax({url: "http://localhost:8080/api/users", success: function(results){
+        
+        // $("#div1").html(result);
+        console.log(results);
+    }});
+    console.log("test")
+});

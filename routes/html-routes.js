@@ -37,16 +37,16 @@ module.exports = function(app) {
   })
 
   app.get("/profilepage", function(req, res) {
-    // res.render(path.join(__dirname, "../views/layouts/main.handlebars"));
-    // res.sendFile(path.join(__dirname, "../public/profilePage.html"));
+    // res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
+    res.render(path.join(__dirname, "../views/index.handlebars"));
 
-    db.User.findAll({}).then(
-    function(data) {
-      var hbsObject = {
-        users: data
-      };
-      console.log(hbsObject);
-      res.render("index", hbsObject);
-    });
+    // db.User.findAll({}).then(
+    // function(data) {
+    //   var hbsObject = {
+    //     users: [data]
+    //   };
+    //   console.log(hbsObject);
+    //   res.render("index", hbsObject);
+    // });
   });
 };
