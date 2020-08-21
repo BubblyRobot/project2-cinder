@@ -126,6 +126,23 @@ module.exports = function (app) {
       //   response.json(place);
       // });
     });
+    
+
+
+  });
+  app.get("/api/cafe", function (req, response) {
+    
+    console.log("this hit the quereyurl")
+    const queryUrL = `https://maps.googleapis.com/maps/api/cafe/findplacefromtext/json?input=cafe${req.query.userInput}&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=${process.env.GOOGLE_API_KEY}`;
+    axios.get(queryUrL).then(function (result) {
+      console.dir(result.data.candidates[0]);
+      response.json(result.data.candidates[0])
+      // const places = result.data.map(function (place) {
+      //   console.log(place)
+      //   response.json(place);
+      // });
+    });
+    
 
 
   });
