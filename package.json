@@ -28,6 +28,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^5.8.6",
+    "simple-jwt": "^1.0.3",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {

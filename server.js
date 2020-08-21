@@ -1,38 +1,33 @@
-const express = require("express");
 const path = require("path");
-
+const http = require('http');
+const express = require("express");
 const socketio = require('socket.io');
-// Sets up the Express App
-// =============================================================
-const app = express();
-const http = require('http').Server(app);
 
-
-
-const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users');
 // ##############  EXPRESS STUFF ######################
 // Requiring our models for syncing
 var db = require("./models");
+
+
 const formatMessage = require('./utils/messages');
+const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users');
+
 var passport   = require('./config/passport');
 var session    = require('express-session');
 var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 
 
-
-// Beginning of Server Stuff ############################################################################
-var PORT = process.env.PORT || 8080;
-
-//
-
-// initializing port for chat
-
-
-const server = http.listen(8081, function(){
-    console.log('listening on *:8081');
-})
+// Sets up the Express App
+// =============================================================
+const app = express();
+const server = http.createServer(app);
 const io = socketio(server);
+
+
+// const server = http.listen(8081, function(){
+//     console.log('listening on *:8081');
+// })
+// const io = socketio(server);
 
 // #############################
 
@@ -141,6 +136,14 @@ const botName = "Cinder Bot";
  });
 
 
-
-
 // ====================================================================== End of Sockets Chat App Functionality
+
+// Beginning of Server Stuff ############################################################################
+var PORT = process.env.PORT || 8080;
+const PORT2 = process.env.PORT || 3000;
+
+//
+
+// initializing port for chat
+server.listen(PORT2, () => console.log(`Server running on port ${PORT2}`));
+
