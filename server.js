@@ -1,8 +1,5 @@
 var express = require("express");
 var path = require("path");
-// if(process.env.NODE_ENV !== "production"){
-//   require('dotenv').config(); 
-// } 
 
 
 // Sets up the Express App
@@ -10,10 +7,7 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-
-//Added Code here for Chat App susan added
-
-// app is an express app, do what you usually do with express
+//
 
 const http = require('http').Server(app);
 
