@@ -63,7 +63,7 @@ io.sockets.on('connection', function(socket) {
 // Routes
 // =============================================================
 require("./routes/api-routes.js")(app);
-require("./routes/api-external.js")(app);
+
 require("./routes/html-routes.js")(app);
 
 // using controllers for routes
