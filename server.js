@@ -1,25 +1,40 @@
-var express = require("express");
-var path = require("path");
+const express = require("express");
+const path = require("path");
 
-
+const socketio = require('socket.io');
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = process.env.PORT || 8080;
-
-//
-
+const app = express();
 const http = require('http').Server(app);
 
-const io = require('socket.io')(http);
 
 
+const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users');
+// ##############  EXPRESS STUFF ######################
 // Requiring our models for syncing
 var db = require("./models");
+const formatMessage = require('./utils/messages');
 var passport   = require('./config/passport');
 var session    = require('express-session');
 var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
+
+
+
+// Beginning of Server Stuff ############################################################################
+var PORT = process.env.PORT || 8080;
+
+//
+
+// initializing port for chat
+
+
+const server = http.listen(8081, function(){
+    console.log('listening on *:8081');
+})
+const io = socketio(server);
+
+// #############################
 
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
  
@@ -35,23 +50,6 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
-
-//Sockets Stuff goes here
-io.sockets.on('connection', function(socket) {
-  socket.on('username', function(username) {
-      socket.username = username;
-      io.emit('is_online', '🔵 <i>' + socket.username + ' join the chat..</i>');
-  });
-
-  socket.on('disconnect', function(username) {
-      io.emit('is_online', '🔴 <i>' + socket.username + ' left the chat..</i>');
-  })
-
-  socket.on('chat_message', function(message) {
-      io.emit('chat_message', '<strong>' + socket.username + '</strong>: ' + message);
-  });
-
-});
 
 
 // Routes
@@ -80,6 +78,67 @@ db.sequelize.sync({ }).then(function() {
   });
 });
 
-const server = http.listen(8081, function() {
-  console.log('listening on *:8081');
-});
+// #########################################  End of Express Stuff ######################
+
+
+// ######################################    All Chat Stuff 
+
+// ===============================================================
+const botName = "Cinder Bot";
+
+ // Run when a client connects
+ io.on('connection', socket =>{
+
+    //joining the room here
+     socket.on('joinRoom', ({ username, room }) => {
+
+        const user = userJoin(socket.id, username, room);
+        socket.join(user.room);
+
+
+         // Welcome current user goes to specific user
+        socket.emit('message', formatMessage(botName, 'Welcome to Cinder Chat!'));
+
+     // Broacast when a user connects
+    socket.broadcast
+        .to(user.room)
+        .emit('message', formatMessage(botName, `${user.username} has joined the chat`));
+     
+        // Send users and room info to the particular Room 
+        io.to(user.room).emit('roomUsers', {
+            room: user.room,
+            users: getRoomUsers(user.room)
+        });
+    });
+
+    // Listen for chnatMessage
+    socket.on('chatMessage', (msg) => {
+
+        const user = getCurrentUser(socket.id);
+        io.to(user.room).emit('message',formatMessage(user.username, msg));
+    });
+
+
+    // Runs when client disconnects
+    socket.on('disconnect', () => {
+        const user = userLeave(socket.id);
+
+        if(user){
+            io.to(user.room).emit(
+            'message',
+             formatMessage(botName, `${user.username} has left the chat`));
+            
+             // Update users and room info
+             io.to(user.room).emit('roomUsers', {
+                 room: user.room,
+                 users: getRoomUsers(user.room)
+             });
+        }
+    });
+
+ });
+
+
+
+
+// ====================================================================== End of Sockets Chat App Functionality
