@@ -1,20 +1,23 @@
 $(document).ready(function() {
   // Getting references to our form and input
   var questContainer = $("div.login-in-container");
-  var firstName = $("input#name");
+  var firstName = $("input#firstName");
+  console.log(firstName);
   var lastName = $("input#lastName");
+  console.log(lastName);
   var nickName = $("input#nickName");
-
-  var phoneNumber = $("input#phone");
+  console.log(nickName);
+  var phoneNumber = $("input#phoneNumber");
+  console.log(phoneNumber);
   var workPlace = $("input#workPlace");
+  console.log(workPlace);
 
   var jobRole = {};
   var language = $('#language :checkbox:checked').map(function() {
     return $(this).val();
 });
-$('#language').append(language.join(','));
 
-
+console.log(language);
   
   
   $('optgroup').each(function() {
@@ -26,6 +29,7 @@ $('#language').append(language.join(','));
   
 
   console.log(JSON.stringify(jobRole));
+  console.log(jobRole)
 
   var dobMonth = $("select#dobMonth").change(function(){
       var selectedMonth = $(this).children("option:selected").val();
