@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="../public/css/Quesionaire.css">
+	<link rel="stylesheet" href="css/Quesionaire.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
@@ -12,11 +12,11 @@
 <body>
 	<div class="container" id="container">
 		<div class="form-container log-in-container">
-			<form action="#">
+			<form action="#" class="updateForm">
 				<span>Update your Profile Information</span>
-				<input type="Name" placeholder="Update Your Name" id="firstName" />
-				<input type="Last Name" placeholder="Update Your Last Name" id="lastName" />
-				<input type="Nick Name" placeholder="Choose a Nick Name" id="nickName"/>
+				<input type="text" required placeholder="Update Your Name" id="firstName" />
+				<input type="text" required placeholder="Update Your Last Name" id="lastName" />
+				<input type="text" required placeholder="Choose a Nick Name" id="nickName"/>
 				<label for="dob-day" class="control-label">Date of birth</label>
 				<div class="controls" id="controls">
 				  <select name="dob-day" id="dobDay">
@@ -220,32 +220,32 @@
 					</select> 
 				 </div>
 				
-				<div class="controls" id="controls">
-				  <select name="work-experience" id="workExperience">
-					<option value="">How Many Years of Experience You Have</option>
-					<option value="01">01</option>
-					<option value="02">02</option>
-					<option value="03">03</option>
-					<option value="04">04</option>
-					<option value="05">05</option>
-					<option value="06">06</option>
-					<option value="07">07</option>
-					<option value="08">08</option>
-					<option value="09">09</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-					<option value="15">15</option>
-					<option value="16">16</option>
-					<option value="17">17</option>
-					<option value="18">18</option>
-					<option value="19">19</option>
-					<option value="20">20</option>
-			</div>
-			
-				<!-- <div class="sch-style-5">
+					<div class="controls" id="controls">
+					<select name="work-experience" id="workExperience">
+						<option value="">How Many Years of Experience You Have</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+					</div>
+				
+					<!-- <div class="sch-style-5">
 					<div class="sch-style-title">Select Your Gender :</div>
 					<div class="sch-radio">
 						<div class="sch-title-item">
@@ -274,10 +274,11 @@
 							</span>
 						</div>
 					</div>
-				<!-- </div> -->
-				<button type="button" id="updateButton">UPDATE</button> 
-			  </div>
-		<div class="overlay-container">
+					<!-- </div> -->
+					<button type="update" id="updateButton">UPDATE</button> 
+				</div>
+			</form>
+			<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-panel overlay-right">
 					<h3>UPDATE PROFILE INFORMATION</h3>
