@@ -12,11 +12,6 @@ function campusLocation(){
  var queryURL = "/api/place/"
   //  var queryURL = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=pizza%20new%20york&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=${PRODUCTION}`;
 
-
-  $("#saveBut").click(function(){
-    console.log("plz work")
-    console.log($("#usersInput").val())
-
   $("#saveBut").click(function(){
     console.log("plz work")
     console.log($("#usersInput").val())
