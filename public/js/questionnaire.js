@@ -10,9 +10,9 @@ $(document).ready(function() {
   var jobRole = {};
   var language = $('#language :checkbox:checked').map(function() {
     return $(this).val();
-});
+  });
 
-console.log(language);
+  console.log(language);
   
   
   $('optgroup').each(function() {
