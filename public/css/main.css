@@ -21,7 +21,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
 
 .header {
   height: 70px;
-  background-color: #3f4257;
+  background-color: red;
   position: fixed;
   top: 0;
   left: 0;
@@ -288,7 +288,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     .author-page .chat-settings a {
       color: #888da8; }
       .author-page .chat-settings a:hover {
-        color: #515365; }
+        color: orange; }
     .author-page .chat-settings .icon-status {
       margin-right: 20px;
       position: relative;
@@ -307,7 +307,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
   .account-settings a {
     padding: 13px 0;
     font-size: 12px;
-    color: #515365;
+    color: orange;
     display: block;
     font-weight: 700; }
     .account-settings a:hover {
@@ -323,7 +323,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     font-size: 12px; }
   .custom-status.form-group.with-button button {
     border-radius: 0 5px 5px 0;
-    background-color: #7c5ac2;
+    background-color: orange;
     overflow: hidden; }
     .custom-status.form-group.with-button button svg {
       fill: #fff;
@@ -393,9 +393,9 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     color: #9a9fbf;
     display: block; }
     .profile-menu li > div:hover, .profile-menu li a:hover {
-      color: #515365; }
+      color: orange; }
     .profile-menu li > div.active, .profile-menu li a.active {
-      color: #515365; }
+      color: orange; }
   .profile-menu .more-dropdown {
     width: 230px;
     top: calc(100% + 10px);
@@ -544,7 +544,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     font-weight: 700;
     font-size: 13px;
     position: relative;
-    color: #515365;
+    color: orange;
     padding: 30px;
     display: block;
     line-height: 1; }
@@ -599,11 +599,11 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
   z-index: 19;
   transition: all .3s ease; }
   .header--standard .logo {
-    color: #515365; }
+    color: orange; }
     .header--standard .logo .img-wrap {
       margin-right: 13px; }
     .header--standard .logo:hover {
-      color: #515365; }
+      color: orange; }
   .header--standard .header-menu {
     margin-left: auto; }
     .header--standard .header-menu .dropdown-item {
@@ -799,7 +799,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.2); }
     .header--standard-landing.headroom--not-top .logo {
-      color: #515365; }
+      color: orange; }
     .header--standard-landing.headroom--not-top .open-responsive-menu {
       fill: #9a9fbf; }
       .header--standard-landing.headroom--not-top .open-responsive-menu:hover {
@@ -807,14 +807,14 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     .header--standard-landing.headroom--not-top .logo .logo-colored {
       opacity: 1; }
     .header--standard-landing.headroom--not-top .logo .logo-title {
-      color: #515365; }
+      color: orange; }
     .header--standard-landing.headroom--not-top .header-menu .nav-item a,
     .header--standard-landing.headroom--not-top .header-menu li .nav-link {
-      color: #515365;
+      color: orange;
       fill: #9a9fbf; }
       .header--standard-landing.headroom--not-top .header-menu .nav-item a:hover,
       .header--standard-landing.headroom--not-top .header-menu li .nav-link:hover {
-        color: #515365;
+        color: orange;
         fill: #9a9fbf; }
     .header--standard-landing.headroom--not-top .header-menu li .dropdown-item {
       color: #888da8; }
@@ -1222,7 +1222,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     bottom: 20px;
     color: #888da8; }
     .top-header-author .author-name {
-      color: #515365; }
+      color: orange; }
       .top-header-author .author-name:hover {
         color: #ff5e3a; }
   .top-header-author {
@@ -1283,7 +1283,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
   .author-page .author-name {
     display: inline-block; }
   .control-block .author-title {
-    color: #515365; }
+    color: orange; }
   .control-block .author-thumb {
     position: relative; }
   .author-thumb .icon-status {
@@ -1301,7 +1301,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
   .popup-chat .notification-list.chat-message .notification-event {
     width: 75%; }
   .tab-content-responsive .ui-block-title a {
-    color: #515365; }
+    color: orange; }
   .tab-content-responsive .notification-list.friend-requests .selectize-dropdown .notification-icon {
     display: inline-block;
     float: right; }
@@ -1796,7 +1796,7 @@ section {
     padding: 7px 0;
     display: block; }
     .mobile-app .chat-settings a:hover {
-      color: #515365; }
+      color: orange; }
   .mobile-app .chat-settings .icon-status {
     margin-right: 20px;
     position: relative;
@@ -1873,7 +1873,7 @@ section {
   padding: 0; }
 
 .mobile-app .left-menu a {
-  color: #515365; }
+  color: orange; }
   .mobile-app .left-menu a:hover {
     color: #ff5e3a; }
 
@@ -1894,7 +1894,7 @@ section {
   margin-top: -20px;
   color: #888da8; }
   .mobile-app .top-header-author .author-name {
-    color: #515365; }
+    color: orange; }
 
 .mobile-app .comment-form .form-group {
   width: 80%; }
@@ -1934,7 +1934,7 @@ section {
   bottom: auto; }
 
 .mobile-app .ui-block-title a {
-  color: #515365; }
+  color: orange; }
 
 .mobile-app .ui-block-title .items-round-little {
   color: #fff; }
@@ -1984,7 +1984,7 @@ section {
   .about-olympus a {
     padding: 7px 0;
     font-size: 12px;
-    color: #515365;
+    color: orange;
     display: block;
     font-weight: 700; }
     .about-olympus a:hover {
@@ -2126,7 +2126,7 @@ section {
       margin-left: 10px;
       font-weight: 700;
       font-size: 12px;
-      color: #515365; }
+      color: orange; }
 
 .shop-popup-cart.more-dropdown {
   width: 340px;
@@ -2180,7 +2180,7 @@ section {
 .product-content .counter {
   font-size: 12px;
   font-weight: 700;
-  color: #515365; }
+  color: orange; }
 
 .product-price {
   margin-left: auto;
@@ -2192,7 +2192,7 @@ section {
 .cart-subtotal {
   font-size: 12px;
   font-weight: 700;
-  color: #515365;
+  color: orange;
   padding: 25px 45px 25px 25px;
   border-bottom: 1px solid #e6ecf5;
   text-align: right; }
@@ -2296,9 +2296,9 @@ section {
   border-bottom: 1px solid #e6ecf5; }
   .order-totals-list li span {
     font-weight: 700;
-    color: #515365; }
+    color: orange; }
   .order-totals-list li.total {
-    color: #515365;
+    color: orange;
     font-weight: 700; }
 
 .payment-methods-list {
@@ -2403,7 +2403,7 @@ p {
   font-size: .875rem; }
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #515365; }
+  color: orange; }
 
 .nav-tabs .nav-item {
   position: relative; }
@@ -2441,10 +2441,10 @@ p {
   border: none; }
 
 .card-header a {
-  color: #515365;
+  color: orange;
   display: block; }
   .card-header a:hover, .card-header a:focus {
-    color: #515365; }
+    color: orange; }
 
 .card-header i, .card-header svg {
   float: right;
@@ -2470,14 +2470,14 @@ blockquote {
     blockquote h6 span {
       font-weight: 700;
       display: block;
-      color: #515365; }
+      color: orange; }
   blockquote p {
     margin: 0 0 15px !important;
     font-size: 22px;
     line-height: 1.3em;
     font-weight: 300;
     position: relative;
-    color: #515365; }
+    color: orange; }
     blockquote p:before {
       content: "";
       width: 4px;
@@ -2596,7 +2596,7 @@ img {
 .btn-secondary:not([disabled]):not(.disabled):active {
   background-color: #fff;
   border-color: #e6ecf5;
-  color: #515365;
+  color: orange;
   box-shadow: none; }
 
 .modal-content {
@@ -2916,7 +2916,7 @@ button:hover {
   opacity: 1; }
 
 .btn-purple {
-  background-color: #7c5ac2; }
+  background-color: orange; }
 
 .btn-blue {
   background-color: #38a9ff; }
@@ -2928,7 +2928,7 @@ button:hover {
   background-color: #1ed760; }
 
 .btn-grey {
-  background-color: #515365; }
+  background-color: orange; }
 
 .btn-grey-light {
   background-color: #888da8; }
@@ -2949,11 +2949,11 @@ button:hover {
   background-color: #3f4257; }
 
 .btn-light-bg {
-  color: #515365; }
+  color: orange; }
   .btn-light-bg:hover {
-    color: #515365; }
+    color: orange; }
   .btn-light-bg:focus {
-    color: #515365; }
+    color: orange; }
 
 .btn-market {
   text-transform: none;
@@ -3077,7 +3077,7 @@ button:hover {
   background-color: #ff5e3a; }
 
 .chat-message {
-  background-color: #7c5ac2; }
+  background-color: orange; }
 
 .btn--half-width {
   width: 48%; }
@@ -3138,7 +3138,7 @@ textarea {
   padding: 1.3rem 1.1rem .2rem; }
 
 input, .form-control {
-  color: #515365;
+  color: orange;
   line-height: inherit;
   font-size: .875rem; }
 
@@ -3459,7 +3459,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .list--styled {
   margin: 35px 0; }
   .list--styled li {
-    color: #515365;
+    color: orange;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3821,7 +3821,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     padding: 0; }
     .fixed-sidebar .ui-block-title a + a {
       float: right;
-      color: #515365; }
+      color: orange; }
   .fixed-sidebar .mCustomScrollbar {
     max-height: calc(100vh - 70px);
     overflow: hidden; }
@@ -4036,7 +4036,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
             align-items: center;
     color: #9a9fbf; }
     .left-menu a:hover {
-      color: #515365; }
+      color: orange; }
       .left-menu a:hover svg {
         fill: #ff5e3a; }
 
@@ -4103,7 +4103,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #7c5ac2;
+  background-color: orange;
   fill: #fff;
   height: 70px; }
   .olympus-chat .olymp-chat---messages-icon {
@@ -4186,7 +4186,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 
 .skills-item-info {
   margin-bottom: 16px;
-  color: #515365;
+  color: orange;
   font-size: 12px; }
   .skills-item-info .skills-item-count {
     float: right; }
@@ -4313,7 +4313,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   .more-dropdown a {
     padding: 7px 0;
     font-size: 12px;
-    color: #515365;
+    color: orange;
     display: block;
     font-weight: 700; }
     .more-dropdown a.btn-sm {
@@ -4918,7 +4918,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     display: block;
     font-weight: 700; }
     .your-profile-menu li a:hover {
-      color: #515365; }
+      color: orange; }
   .your-profile-menu.nav-tabs .nav-link {
     border: none;
     border-top-left-radius: 0;
@@ -5110,7 +5110,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     overflow: hidden; }
 
 .chat-message li.chat-group .last-message-author {
-  color: #515365;
+  color: orange;
   font-weight: 700; }
 
 .chat-message li.message-unread {
@@ -5366,7 +5366,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     z-index: -1;
     visibility: hidden; }
   .popup-chat .modal-header {
-    background-color: #7c5ac2;
+    background-color: orange;
     padding: 17px; }
     .popup-chat .modal-header .title {
       color: #fff; }
@@ -5403,7 +5403,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     overflow: hidden;
     padding: 9px 25px; }
     .popup-chat .chat-message-field li:nth-child(2n) .chat-message-item {
-      background-color: #7c5ac2;
+      background-color: orange;
       color: #fff; }
     .popup-chat .chat-message-field li:nth-child(2n) .author-thumb {
       float: right; }
@@ -5621,9 +5621,9 @@ figcaption {
   text-align: center;
   font-size: 13px;
   font-weight: 700;
-  color: #515365; }
+  color: orange; }
   figcaption a {
-    color: #515365; }
+    color: orange; }
     figcaption a:hover {
       color: #ff5e3a; }
   figcaption span {
@@ -6409,7 +6409,7 @@ ol ol li {
 .names-people-likes {
   font-size: 12px; }
   .names-people-likes a {
-    color: #515365;
+    color: orange;
     font-weight: 700; }
 
 .post-control-button .btn-control {
@@ -6457,7 +6457,7 @@ ol ol li {
   .empty-post-content .title {
     font-size: 16px;
     font-weight: 700;
-    color: #515365; }
+    color: orange; }
   .empty-post-content span {
     font-size: 11px; }
 
@@ -6585,14 +6585,14 @@ ol ol li {
   text-align: center;
   padding: 15px 0;
   font-size: 12px;
-  color: #515365;
+  color: orange;
   display: block;
   font-weight: 700;
   margin: 0 auto; }
   .more-comments span {
     transition: all .3s ease; }
   .more-comments:hover {
-    color: #515365; }
+    color: orange; }
     .more-comments:hover span {
       color: #ff5e3a; }
 
@@ -6746,7 +6746,7 @@ ol ol li {
   .news-feed-form .nav-tabs .nav-link.active {
     background-color: #fff;
     fill: #ff5e3a;
-    color: #515365;
+    color: orange;
     border-bottom: transparent; }
   .news-feed-form .nav-tabs {
     background-color: #fafbfd;
@@ -7124,7 +7124,7 @@ ol ol li {
     fill: #c2c5d9; }
   .date-event .day {
     font-size: 14px;
-    color: #515365;
+    color: orange;
     font-weight: 700;
     margin-bottom: 3px; }
   .date-event .month {
@@ -7198,7 +7198,7 @@ ol ol li {
   .event-item-table .author-date a {
     color: #08ddc1; }
   .event-item-table .author-date .author-name {
-    color: #515365; }
+    color: orange; }
 
 .event-item-table-fixed-width .author-date {
   font-size: 12px; }
@@ -7249,7 +7249,7 @@ ol ol li {
   display: table;
   width: 100%; }
   .available-widget .custom-control-description {
-    color: #515365;
+    color: orange;
     font-weight: 700; }
   .available-widget .form-group {
     margin-bottom: 0; }
@@ -7413,7 +7413,7 @@ ol ol li {
     font-size: 14px;
     color: #888da8; }
     .calendar-events-tabs.nav-tabs .nav-link.active {
-      color: #515365;
+      color: orange;
       background-color: transparent; }
   .calendar-events-tabs.nav-tabs .items-round-little {
     display: inline-block; }
@@ -7466,7 +7466,7 @@ ol ol li {
 
 .event-time time {
   font-size: 10px;
-  color: #515365;
+  color: orange;
   font-weight: bold; }
 
 .event-time .more svg {
@@ -7525,7 +7525,7 @@ ol ol li {
 .crumina-full-calendar .fc-toolbar h2 {
   font-weight: 700;
   line-height: 1.3;
-  color: #515365;
+  color: orange;
   font-size: .875rem; }
 
 .crumina-full-calendar .fc-button.fc-dayGridMonth-button,
@@ -7670,7 +7670,7 @@ ol ol li {
 
 .monthly-count {
   font-size: 24px;
-  color: #515365;
+  color: orange;
   overflow: hidden;
   line-height: 1; }
   .monthly-count .indicator {
@@ -7739,7 +7739,7 @@ ol ol li {
     margin-left: 10px; }
   .statistics-list-count .count-stat {
     font-size: 24px;
-    color: #515365; }
+    color: orange; }
   .statistics-list-count li {
     margin-bottom: 18px; }
     .statistics-list-count li:last-child {
@@ -7760,7 +7760,7 @@ ol ol li {
 
 .general-statistics {
   font-size: 28px;
-  color: #515365;
+  color: orange;
   text-align: center; }
   .general-statistics span {
     display: block;
@@ -7799,7 +7799,7 @@ ol ol li {
     font-weight: 700;
     float: right;
     margin-top: 3px;
-    color: #515365; }
+    color: orange; }
   .country-statistics .country {
     margin-right: 30px;
     line-height: 1; }
@@ -7833,7 +7833,7 @@ ol ol li {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     font-size: 42px;
-    color: #515365; }
+    color: orange; }
 
 #us-chart-map {
   margin: 0 auto 35px; }
@@ -7846,11 +7846,11 @@ ol ol li {
   text-align: center; }
   .text-stat .count-stat {
     font-size: 32px;
-    color: #515365; }
+    color: orange; }
   .text-stat .title {
     font-size: 12px;
     font-weight: 700;
-    color: #515365; }
+    color: orange; }
   .text-stat .sub-title {
     font-size: 12px; }
 
@@ -7859,12 +7859,12 @@ ol ol li {
   margin-bottom: 80px; }
   .statistics-slide .count-stat {
     font-size: 60px;
-    color: #515365;
+    color: orange;
     margin-bottom: 20px; }
   .statistics-slide .title {
     font-size: 16px;
     font-weight: 700;
-    color: #515365;
+    color: orange;
     margin-bottom: 10px; }
     .statistics-slide .title .c-primary {
       color: #ff5e3a; }
@@ -8317,7 +8317,7 @@ ol ol li {
     font-size: 46px;
     margin-bottom: 35px; }
     .single-post .post-title:hover {
-      color: #515365; }
+      color: orange; }
   .single-post .post-thumb {
     border-radius: 0;
     margin: 0 -60px 50px; }
@@ -8361,7 +8361,7 @@ ol ol li {
     font-size: 12px;
     margin-bottom: 30px; }
     .choose-reaction .title span {
-      color: #515365; }
+      color: orange; }
   .choose-reaction li {
     display: inline-block; }
     .choose-reaction li + li {
@@ -9218,7 +9218,7 @@ ol ol li {
     vertical-align: middle;
     width: 20%; }
     .table-careers span.position, .table-careers span.type {
-      color: #515365; }
+      color: orange; }
   .table-careers .head {
     border: none;
     box-shadow: none; }
@@ -9273,7 +9273,7 @@ ol ol li {
     .help-support-block .title .total-topic {
       margin-left: 15px; }
     .help-support-block .title:hover .total-topic {
-      background-color: #7c5ac2;
+      background-color: orange;
       color: #fff; }
 
 .total-topic {
@@ -9286,7 +9286,7 @@ ol ol li {
   text-align: center;
   line-height: 30px;
   display: block;
-  color: #515365; }
+  color: orange; }
 
 .help-support-list li {
   display: -webkit-box;
@@ -9310,7 +9310,7 @@ ol ol li {
   .help-support-list li + li {
     margin-top: 20px; }
   .help-support-list li:hover a {
-    color: #515365; }
+    color: orange; }
   .help-support-list li:hover svg {
     fill: #ff5e3a; }
 
@@ -9350,7 +9350,7 @@ ol ol li {
     .user-raiting-choice a:hover {
       opacity: 1; }
   .user-raiting-choice span {
-    color: #515365;
+    color: orange;
     margin-left: auto;
     font-weight: 700; }
 
@@ -9411,7 +9411,7 @@ ol ol li {
 .user-raiting {
   margin-top: 30px;
   font-size: 12px;
-  color: #515365;
+  color: orange;
   font-weight: 700; }
   .user-raiting img {
     margin-right: 20px;
@@ -9659,7 +9659,7 @@ ol ol li {
     position: absolute;
     right: 15px;
     top: 0;
-    color: #515365;
+    color: orange;
     font-size: 11px;
     height: 50%;
     width: 20px;
@@ -9670,7 +9670,7 @@ ol ol li {
 
 .tags {
   font-size: 12px;
-  color: #515365;
+  color: orange;
   font-weight: 700; }
   .tags li {
     display: inline-block; }
@@ -9684,7 +9684,7 @@ ol ol li {
 
 .article-number {
   font-size: 12px;
-  color: #515365;
+  color: orange;
   font-weight: 700; }
   .article-number span {
     color: #888da8;
@@ -9702,7 +9702,7 @@ ol ol li {
     color: #888da8;
     font-size: 14px; }
     .product-description .nav-tabs .nav-link.active {
-      color: #515365; }
+      color: orange; }
       .product-description .nav-tabs .nav-link.active .total-topic {
         background-color: #ff5e3a; }
     .product-description .nav-tabs .nav-link .total-topic {
@@ -9755,7 +9755,7 @@ ol ol li {
     font-size: 11px; }
     .comments__item-review .comments__header-review .comments__author-review a {
       font-weight: 700;
-      color: #515365;
+      color: orange;
       font-style: normal; }
       .comments__item-review .comments__header-review .comments__author-review a:hover {
         color: #ff5e3a; }
@@ -9946,7 +9946,7 @@ ol ol li {
   background-color: #3f4257; }
 
 .bg-purple {
-  background-color: #7c5ac2; }
+  background-color: orange; }
 
 .bg-blue {
   background-color: #38a9ff; }
@@ -9961,7 +9961,7 @@ ol ol li {
   background-color: #2aebcb; }
 
 .bg-grey {
-  background-color: #515365; }
+  background-color: orange; }
 
 .bg-grey-light {
   background-color: #888da8; }
@@ -10018,7 +10018,7 @@ ol ol li {
   color: #ffdc1b; }
 
 .c-purple {
-  color: #7c5ac2; }
+  color: orange; }
 
 .c-green {
   color: #1ed760;
@@ -10415,7 +10415,7 @@ ol ol li {
   border-bottom: 1px solid #e6ecf5; }
   .user-description .title {
     font-weight: 500;
-    color: #515365; }
+    color: orange; }
 
 /*------------- #STYLES for Range Sliders --------------*/
 .range-slider .irs-line {
@@ -10559,7 +10559,7 @@ ol ol li {
     border-bottom: 3px solid transparent;
     border-right: 1px solid #e6ecf5;
     font-weight: 700;
-    color: #515365; }
+    color: orange; }
     .social-menu-tabs.nav-tabs .nav-link svg {
       fill: #9a9fbf;
       margin-right: 10px; }
@@ -10590,7 +10590,7 @@ ol ol li {
   .w-personal-info li {
     padding: 15px 0; }
     .w-personal-info li .title {
-      color: #515365;
+      color: orange;
       font-weight: 500;
       margin-right: 30px;
       float: left;
@@ -10672,7 +10672,7 @@ ol ol li {
     margin-right: 0;
     float: none;
     width: auto;
-    color: #515365;
+    color: orange;
     font-weight: 500; }
   .w-contacts ul .text {
     color: #888da8;
@@ -10719,7 +10719,7 @@ ol ol li {
 .w-twitter .author-name {
   display: block;
   font-weight: 700;
-  color: #515365; }
+  color: orange; }
 
 .w-twitter .group {
   font-size: 11px;
@@ -10834,7 +10834,7 @@ ol ol li {
 
 .w-playlist.without-cover .play-icon {
   opacity: 1;
-  fill: #515365; }
+  fill: orange; }
 
 .w-playlist.without-cover li:hover .play-icon {
   fill: #1ed760; }
@@ -10851,7 +10851,7 @@ ol ol li {
   display: block;
   font-size: 12px;
   font-weight: 500;
-  color: #515365; }
+  color: orange; }
 
 .composition-author {
   display: block;
@@ -11227,7 +11227,7 @@ ol ol li {
   .day-wethear-item .title {
     font-size: 12px;
     font-weight: 700;
-    color: #515365;
+    color: orange;
     margin-bottom: 40px; }
   .day-wethear-item .icon {
     fill: #38a9ff;
@@ -11236,7 +11236,7 @@ ol ol li {
     width: 55px; }
   .day-wethear-item .temperature-sensor {
     font-size: 18px;
-    color: #515365;
+    color: orange;
     margin-bottom: 10px; }
   .day-wethear-item .wethear-now {
     font-weight: 700; }
@@ -11459,7 +11459,7 @@ ol ol li {
   .w-pool .skills-item-info {
     margin-bottom: 0; }
   .w-pool .radio {
-    color: #515365;
+    color: orange;
     display: inline-block;
     margin-bottom: 5px; }
     .w-pool .radio label {
@@ -11506,7 +11506,7 @@ ol ol li {
   margin-right: 17px; }
 
 .w-about .logo-title {
-  color: #515365; }
+  color: orange; }
 
 /*------------- #W-LIST --------------*/
 .w-list a {
@@ -11798,7 +11798,7 @@ select.selectpicker {
   overflow: hidden;
   width: 100%;
   text-align: left;
-  color: #515365;
+  color: orange;
   font-weight: normal; }
 
 .bootstrap-select.btn-group .dropdown-toggle .caret {
@@ -12016,11 +12016,11 @@ select.selectpicker {
   content: "\f00c";
   font-family: 'Font Awesome 5 Pro';
   font-weight: 900;
-  color: #515365; }
+  color: orange; }
 
 .bootstrap-select.style-2 li.selected a {
   background-color: transparent;
-  color: #515365; }
+  color: orange; }
 
 .bootstrap-select.style-2 .form-control {
   border: none;
@@ -12384,7 +12384,7 @@ select.selectpicker {
 .daterangepicker select.monthselect, .daterangepicker select.yearselect {
   border: none;
   font-size: 13px;
-  color: #515365; }
+  color: orange; }
 
 .daterangepicker th.month {
   padding: 15px 5px; }
