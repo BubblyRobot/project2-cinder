@@ -94,14 +94,48 @@ $(document).ready(function() {
 
 
 
-    //   users api
 
-    $.ajax({url: "http://localhost:8080/api/users", success: function(results){
+    // $.ajax({url: "http://localhost:8080/api/users", success: function(data){
         
-        // $("#div1").html(result);
-        console.log(results);
-    }}).then(
+    //     // $("#div1").html(result);
+    //     console.log(data);
 
-    )
-    console.log("test")
+    // }}).then(function(data){
+
+    //     console.log(data)
+
+    // });
+    // console.log("test")
+
+
+
+
+    var source   = $("#person-template").html();
+    var template = Handlebars.compile(source);
+    var person = "";
+    var placeHolder = $("ul.persons");
+    
+    $.get( "http://localhost:8080/api/users", function( data ) {
+        $.each(data, function(idx, val){
+            console.log(data);
+            person = template(val);
+            
+            placeHolder.append(person);
+        });   
+        
+        // placeHolder
+        //   // Blast the text apart by word.
+        //   .blast({ delimiter: "word" })
+        //   // Fade the words into view using Velocity.js.
+        //   .velocity("transition.fadeIn", { 
+        //     display: null,
+        //     duration: 100,
+        //     stagger: 50,
+        //     delay: 0
+        //   });
+    });
+    
+    
+
+
 });

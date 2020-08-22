@@ -61,10 +61,19 @@ module.exports = function (app) {
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
     db.User.findAll({ 
-    }).then(function(dbUser) {
-      res.json(dbUser);
+    }).then(function(data) {
+      var hbsObject = {
+        users: [data]
+      };
+      console.log(hbsObject);
+      // res.render("index", hbsObject);
 
+      res.json(data);
+
+    }).catch(err => {
+      console.log(err);
     });
+
   });
 
   // route for rendering one specific user
@@ -80,7 +89,7 @@ module.exports = function (app) {
         users: data
       };
       console.log(hbsObject);
-      res.render("user", hbsObject);
+      res.render("index", hbsObject);
 
     }).catch(err => {
       console.log(err);
@@ -122,7 +131,7 @@ module.exports = function (app) {
   app.get("/api/place", function (req, response) {
     
     console.log("this hit the quereyurl")
-    const queryUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${req.query.userInput}&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=${process.env.GOOGLE_API_KEY}`;
+    var queryUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${req.query.userInput}&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=${process.env.GOOGLE_API_KEY}`;
     axios.get(queryUrl).then(function (result) {
       console.dir(result.data.candidates[0]);
       response.json(result.data.candidates[0])
@@ -131,9 +140,31 @@ module.exports = function (app) {
       //   response.json(place);
       // });
     });
+    
 
 
   });
+  app.get("/api/place", function (req, response) {
+    
+    console.log("this hit the quereyurl")
+    var queryUrL = `https://maps.googleapis.com/maps/api/place/photo?photoreference=${req.query.userInput}&sensor=false&maxheight=MAX_HEIGHT&maxwidth=MAX_WIDTH&key=${process.env.GOOGLE_API_KEY}`;
+    axios.get(queryUrL).then(function (result) {
+      console.dir(result.data.candidates[0]);
+      response.json(result.data.candidates[0])
+      // const places = result.data.map(function (place) {
+      //   console.log(place)
+      //   response.json(place);
+      // });
+    });
+    
+
+
+  });
+ 
+    
+
+
+  
   // cms route loads cms.html
 
 };
