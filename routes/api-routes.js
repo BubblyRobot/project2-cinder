@@ -58,7 +58,7 @@ module.exports = function (app) {
     db.User.findAll({ 
     }).then(function(data) {
       var hbsObject = {
-        users: [data]
+        users: data
       };
       console.log(hbsObject);
       // res.render("index", hbsObject);
