@@ -56,10 +56,19 @@ module.exports = function (app) {
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
     db.User.findAll({ 
-    }).then(function(dbUser) {
-      res.json(dbUser);
+    }).then(function(data) {
+      var hbsObject = {
+        users: [data]
+      };
+      console.log(hbsObject);
+      // res.render("index", hbsObject);
 
+      res.json(data);
+
+    }).catch(err => {
+      console.log(err);
     });
+
   });
 
   // route for rendering one specific user
@@ -75,7 +84,7 @@ module.exports = function (app) {
         users: data
       };
       console.log(hbsObject);
-      res.render("user", hbsObject);
+      res.render("index", hbsObject);
 
     }).catch(err => {
       console.log(err);
