@@ -8,7 +8,6 @@ console.log('we loaded js file!!!')
 // routes backend and call the external api and return teh data to the front
 
 
-
 function campusLocation() {
 
     var queryURL = "/api/place/"
@@ -36,7 +35,6 @@ function campusLocation() {
         }).catch(function (err) {
             console.log('ERR!!!', err)
         })
-
 
 
 
