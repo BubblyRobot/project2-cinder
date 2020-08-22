@@ -39,7 +39,40 @@ let bootCamps = [
     name: "Coder Academy",
     link: "https://coderacademy.edu.au/?utm_source=coursereport&utm_medium=schoolpage"
 }
+
 ]
+
+let codingWebSites = [
+    {
+        name: "Code Wars",
+        link: "https://www.codewars.com"
+    },
+    {
+        name: "Code Conquest",
+        link: "https://www.codeconquest.com"
+    }, 
+    {
+        name: "GA Dash",
+        link: "https://dash.generalassemb.ly/"
+    },
+    {
+        name: "MIT Open Courseware",
+        link: "https://ocw.mit.edu/"
+    },
+    {
+        name: "The Odin Project",
+        link: "https://www.theodinproject.com/"
+    },
+    {
+        name: "Udacity",
+        link: "https://www.udacity.com/"
+    },
+    {
+        name: "SoloLearn",
+        link: "https://www.sololearn.com/"
+    },
+]
+
 $(document).ready(function() {
 
     $.ajax({url: "http://localhost:8080/api/users", success: function(results){
