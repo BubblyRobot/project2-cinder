@@ -122,3 +122,7 @@ public/.DS_Store
 package-lock.json
 
 package.json
+
+/config/config.json
+
+views/partials/.DS_Store
