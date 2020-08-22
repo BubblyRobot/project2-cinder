@@ -46,7 +46,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     // data from questionnaire
     picture: {
-      type: DataTypes.BLOB,
+      type: DataTypes.BLOB("long"),
       allowNull: true
     },
     aboutme: {

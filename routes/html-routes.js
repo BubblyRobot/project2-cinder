@@ -36,6 +36,24 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/chatroom.html"));
   })
 
+  app.get("/upload", function(req,res){
+    res.sendFile(path.join(__dirname, "../public/upload.html"));
+  })
+
+  app.get('/photo/:id', (req, res) => {
+    var filename = req.params.id;
+     
+    db.collection('mycollection').findOne({'_id': ObjectId(filename) }, (err, result) => {
+     
+        if (err) return console.log(err)
+     
+       res.contentType('image/jpeg');
+       res.send(result.image.buffer)
+       
+        
+      })
+    })
+
   app.get("/profilepage", function(req, res) {
     // res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
     res.render(path.join(__dirname, "../views/index.handlebars"));
