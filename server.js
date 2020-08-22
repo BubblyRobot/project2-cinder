@@ -2,6 +2,7 @@ const path = require("path");
 const http = require('http');
 const express = require("express");
 const socketio = require('socket.io');
+var fileNameMulter = "1.jpg";
 
 
 // ##############  EXPRESS STUFF ######################
@@ -25,18 +26,24 @@ var storage = multer.diskStorage({
       cb(null, path.join(__dirname, "/public/img/uploads"))
     },
     filename: function (req, file, cb) {
-        var filename = Date.now();
-        switch (file.mimetype) {
-          case 'image/png':
-          filename = filename + ".png";
-          break;
-          case 'image/jpeg':
-          filename = filename + ".jpeg";
-          break;
-          default:
-          break;
-        }
-      cb(null, filename);
+        cb(null, fileNameMulter );
+      
+        //+ path.extname(file.originalname)
+
+      // var filename = Date.now();
+
+        
+      //   switch (file.mimetype) {
+      //     case 'image/png':
+      //     filename = filename + ".png";
+      //     break;
+      //     case 'image/jpeg':
+      //     filename = filename + ".jpeg";
+      //     break;
+      //     default:
+      //     break;
+      //   }
+      // cb(null, filename);
     }
   });
    
@@ -174,7 +181,8 @@ const botName = "Cinder Bot";
 // Beginning of file upload
 app.post('/upload', upload.single('photo'), (req, res) => {
     if(req.file){
-        res.json(req.file);
+        fileNameMulter = req.file.originalname;
+        console.log(fileNameMulter)
     }
     else throw 'error';
    });
