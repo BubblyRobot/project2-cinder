@@ -81,13 +81,16 @@ $(document).ready(function() {
         bootcamp.text(bootCamps[i].name);
         pbootcamp.text("Website link");
     } 
-
-
-
-
-
-
-
+    //Coding Websites
+    for (var i = 0; i < codingWebSites.length; i ++) {
+        var codingSites = $("<li>").appendTo($("#codingsites"));
+        var pcodingSites = $("<a>").appendTo($("#codingsites"));
+        codingSites.attr("value", codingWebSites[i][name]);
+        pcodingSites.attr("href", codingWebSites[i].link);
+        pcodingSites.attr("target", "_blank"); 
+        codingSites.text(codingWebSites[i].name);
+        pcodingSites.text("Website link");
+    } 
 
 
 
