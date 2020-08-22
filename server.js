@@ -105,7 +105,16 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 
 app.set("view engine", "handlebars");
 
+// Susan's handlebars test
 
+// app.engine("hbs", exphbs({
+//   layoutsDir: __dirname + '/views/layouts',
+//   extname: 'hbs',
+//   defaultLayout: "main",
+//   partialsDir: __dirname + '/views/partials/'
+// }));
+
+// app.set("view engine", "exphbs");
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 // force: true 
