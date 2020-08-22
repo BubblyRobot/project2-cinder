@@ -13,6 +13,7 @@ Search for user and groups
 Join groups
 Create groups
 Public Chat Room 
+
 TECHNOLOGIES USED
 Use Database to save users
 You can join various discord style chat rooms. 
