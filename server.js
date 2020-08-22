@@ -3,6 +3,7 @@ const http = require('http');
 const express = require("express");
 const socketio = require('socket.io');
 
+
 // ##############  EXPRESS STUFF ######################
 // Requiring our models for syncing
 var db = require("./models");
@@ -15,8 +16,37 @@ var passport   = require('./config/passport');
 var session    = require('express-session');
 var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
+var multer = require('multer');
+
+//multer stuff
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, path.join(__dirname, "/public/img/uploads"))
+    },
+    filename: function (req, file, cb) {
+        var filename = Date.now();
+        switch (file.mimetype) {
+          case 'image/png':
+          filename = filename + ".png";
+          break;
+          case 'image/jpeg':
+          filename = filename + ".jpeg";
+          break;
+          default:
+          break;
+        }
+      cb(null, filename);
+    }
+  });
+   
+  var upload = multer({ storage: storage })
 
 
+
+
+
+//const upload = multer({dest: __dirname + '/public/img/uploads'});
 // Sets up the Express App
 // =============================================================
 const app = express();
@@ -30,6 +60,10 @@ const io = socketio(server);
 // const io = socketio(server);
 
 // #############################
+//file upload stuff
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+// end of file upload stuff
 
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
  
@@ -45,7 +79,8 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
-
+// set static folder
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 // =============================================================
@@ -63,8 +98,6 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 
 app.set("view engine", "handlebars");
 
-// set static folder
-app.use(express.static(path.join(__dirname, "public")));
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
@@ -137,6 +170,18 @@ const botName = "Cinder Bot";
 
 
 // ====================================================================== End of Sockets Chat App Functionality
+
+// Beginning of file upload
+app.post('/upload', upload.single('photo'), (req, res) => {
+    if(req.file){
+        res.json(req.file);
+    }
+    else throw 'error';
+   });
+
+
+
+// ######################### en dof file uploa
 
 // Beginning of Server Stuff ############################################################################
 var PORT = process.env.PORT || 8080;
