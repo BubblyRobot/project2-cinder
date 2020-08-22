@@ -7,10 +7,6 @@ console.log('we loaded js file!!!')
 // backend interal call db 
 // routes backend and call the external api and return teh data to the front
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 589d224b7f4e3bc061aa100f363133d7c9123c39
 
 function campusLocation() {
 
@@ -42,10 +38,6 @@ function campusLocation() {
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 589d224b7f4e3bc061aa100f363133d7c9123c39
     })
 
 
