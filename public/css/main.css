@@ -21,7 +21,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
 
 .header {
   height: 70px;
-  background-color: #3f4257;
+  background-color: red;
   position: fixed;
   top: 0;
   left: 0;
