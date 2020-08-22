@@ -1,34 +1,34 @@
 $(document).ready(function() {
-    let codingWebSites = [
-        {
-            name: "Code Wars",
-            link: "https://www.codewars.com"
-        },
-        {
-            name: "Code Conquest",
-            link: "https://www.codeconquest.com"
-        }, 
-        {
-            name: "GA Dash",
-            link: "https://dash.generalassemb.ly/"
-        },
-        {
-            name: "MIT Open Courseware",
-            link: "https://ocw.mit.edu/"
-        },
-        {
-            name: "The Odin Project",
-            link: "https://www.theodinproject.com/"
-        },
-        {
-            name: "Udacity",
-            link: "https://www.udacity.com/"
-        },
-        {
-            name: "SoloLearn",
-            link: "https://www.sololearn.com/"
-        },
-    ];
+  let codingWebSites = [
+    {
+        name: "Code Wars",
+        link: "https://www.codewars.com"
+    },
+    {
+        name: "Code Conquest",
+        link: "https://www.codeconquest.com"
+    }, 
+    {
+        name: "GA Dash",
+        link: "https://dash.generalassemb.ly/"
+    },
+    {
+        name: "MIT Open Courseware",
+        link: "https://ocw.mit.edu/"
+    },
+    {
+        name: "The Odin Project",
+        link: "https://www.theodinproject.com/"
+    },
+    {
+        name: "Udacity",
+        link: "https://www.udacity.com/"
+    },
+    {
+        name: "SoloLearn",
+        link: "https://www.sololearn.com/"
+    },
+];
     let bootCamps = [
         {
         name: "Columbia Engineering Boot Camps",
