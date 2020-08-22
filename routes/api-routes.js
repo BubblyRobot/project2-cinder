@@ -117,7 +117,7 @@ module.exports = function (app) {
   app.get("/api/place", function (req, response) {
     
     console.log("this hit the quereyurl")
-    const queryUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${req.query.userInput}&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=${process.env.GOOGLE_API_KEY}`;
+    var queryUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${req.query.userInput}&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=${process.env.GOOGLE_API_KEY}`;
     axios.get(queryUrl).then(function (result) {
       console.dir(result.data.candidates[0]);
       response.json(result.data.candidates[0])
@@ -130,10 +130,10 @@ module.exports = function (app) {
 
 
   });
-  app.get("/api/cafe", function (req, response) {
+  app.get("/api/place", function (req, response) {
     
     console.log("this hit the quereyurl")
-    const queryUrL = `https://maps.googleapis.com/maps/api/cafe/findplacefromtext/json?input=cafe${req.query.userInput}&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=${process.env.GOOGLE_API_KEY}`;
+    var queryUrL = `https://maps.googleapis.com/maps/api/place/photo?photoreference=${req.query.userInput}&sensor=false&maxheight=MAX_HEIGHT&maxwidth=MAX_WIDTH&key=${process.env.GOOGLE_API_KEY}`;
     axios.get(queryUrL).then(function (result) {
       console.dir(result.data.candidates[0]);
       response.json(result.data.candidates[0])
@@ -146,6 +146,11 @@ module.exports = function (app) {
 
 
   });
+ 
+    
+
+
+  
   // cms route loads cms.html
 
 };

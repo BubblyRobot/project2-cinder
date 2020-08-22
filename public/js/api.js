@@ -17,6 +17,7 @@ function campusLocation() {
     $("#saveBut").click(function () {
         console.log("plz work")
         console.log($("#usersInput").val())
+        $("input:text").val("coworking");
 
         $.ajax({
             data: {
@@ -29,6 +30,7 @@ function campusLocation() {
             console.log(response.name)
             $("#location").text(JSON.stringify(response.formatted_address));
             $("#tyler").text(JSON.stringify(response.name));
+            $("#image").text(response.photos[1])
         }).catch(function (err) {
             console.log('ERR!!!', err)
         })
@@ -40,8 +42,11 @@ function campusLocation() {
 
 }
 function cafeLocation() {
-    var cafe = "/api/cafe/"
+    var cafe = "/api/place/"
+
+
     $("#saveBut").click(function () {
+        $("input:text").val("cafe");
         console.log("plz work")
         console.log($("#usersInput").val())
 
@@ -53,9 +58,10 @@ function cafeLocation() {
             method: "GET"
         }).then(function (response) {
 
-            console.log(response.name)
-            $("#location2").text(JSON.stringify(response.formatted_address));
-            $("#tyler2").text(JSON.stringify(response.name));
+            console.log(response)
+            $("#locationTwo").text(JSON.stringify(response.formatted_address));
+            $("#tylerTwo").text(JSON.stringify(response.name));
+            $("#imageTwo").text(response.photos[1].photo_reference[0])
         }).catch(function (err) {
             console.log('ERR!!!', err)
         })
@@ -63,5 +69,79 @@ function cafeLocation() {
     })
 
 }
+function libraryLocation() {
+    var cafe = "/api/place/"
+
+
+    $("#saveBut").click(function () {
+        $("input:text").val("library");
+        console.log("plz work")
+        console.log($("#usersInput").val())
+
+        $.ajax({
+            data: {
+                userInput: $("#usersInput").val()
+            },
+            url: cafe,
+            method: "GET"
+        }).then(function (response) {
+
+            console.log(response.photos[0].photo_reference)
+            $("#locationThree").text(JSON.stringify(response.formatted_address));
+            $("#tylerThree").text(JSON.stringify(response.name));
+
+        }).catch(function (err) {
+            console.log('ERR!!!', err)
+        })
+
+    })
+
+}
+// function photoLocation() {
+//     var photo = "/api/place/"
+//     var photoRef;
+//     var photoURL = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${photoRef}&key=${process.env.GOOGLE_API_KEY}` 
+
+
+//     $("#saveBut").click(function () {
+//         $("input:text").val("library");
+//         console.log("plz work")
+//         console.log($("#usersInput").val())
+
+
+
+//         $.ajax({
+//             data: {
+//                 userInput: $("#usersInput").val()
+//             },
+//             url: photo,
+//             method: "GET"
+//         }).then(function (response) {
+
+
+
+//             $("#imageThree").text(response.photos[0].photo_reference)
+
+//             photoRef = response.photos[0].photo_reference;
+
+//             console.log("i worked", $('#imageThree'))
+//         }).catch(function (err) {
+//             console.log('ERR!!!', err)
+//         })
+//         $.ajax({
+
+//             url: photoURL,
+//             method: "GET"
+//         }).then(function (response) {
+//             $("#imageThree").text(response.photos[0].photo_reference)
+//             var img = $("<img>").appendto($("#imageThree"))
+//             img.attr("src", photoURL)
+//         });
+
+//     })
+
+// }
 campusLocation()
 cafeLocation()
+libraryLocation()
+// photoLocation()
