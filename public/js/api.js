@@ -3,6 +3,7 @@ var searchBtn = $("#search-button");
 console.log('we loaded js file!!!')
 //
 
+
 // backend interal call db 
 // routes backend and call the external api and return teh data to the front
 
