@@ -12,3 +12,18 @@ function checkForm(form)
 }
 
 </script>
+
+
+
+<ul class="chat-users">
+{{#each users}}
+  {{> users/user}}
+{{/each}}
+</ul>
+
+
+<h3>{{nickname}}</h3>
+<div>  
+{{first_name}}, {{last_name}}<br>
+{{email}}<br>
+</div>

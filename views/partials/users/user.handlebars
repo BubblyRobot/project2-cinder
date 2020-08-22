@@ -1,7 +1,24 @@
 <li class="inline-items js-chat-open">
     <div class="author-thumb">
+        <p>{{nickname}}</p>
         <p>Name: {{first_name}} {{last_name}}</p>
         {{!-- <img alt="author" src="/img/avatar67-sm.jpg" class="avatar"> --}}
         <span class="icon-status online"></span>
     </div>
 </li>
+
+
+
+
+			<ul class="chat-users">
+				{{#each users}}
+					{{> users/user}}
+				{{/each}}
+			</ul>
+
+
+        <h3>{{nickname}}</h3>
+		<div>  
+			{{first_name}}, {{last_name}}<br>
+			{{email}}<br>
+		</div>
