@@ -6,6 +6,8 @@ $(document).ready(function() {
     var firstName = $("input#name");
     var lastName = $("input#lastName");
     var nickName = $("input#nickName")
+
+    
     // When the signup button is clicked, we validate the email and password are not blank
     signUpForm.on("submit", function(event) {
       event.preventDefault();
@@ -46,3 +48,4 @@ $(document).ready(function() {
       $("#alert").fadeIn(500);
     }
   });
+ 
