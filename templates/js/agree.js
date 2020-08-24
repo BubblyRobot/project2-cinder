@@ -14,6 +14,11 @@ function checkForm(form)
 </script>
 
 
+<h3>{{nickname}}</h3>
+<div>  
+  {{this.User.dataValues.first_name}}, {{last_name}}<br>
+  {{email}}<br>
+</div>
 
 <ul class="chat-users">
 {{#each users}}

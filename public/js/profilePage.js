@@ -116,11 +116,14 @@ $(document).ready(function() {
     var placeHolder = $("ul.persons");
     
     $.get( "http://localhost:8080/api/users", function( data ) {
+        console.log(data);
         $.each(data, function(idx, val){
-            console.log(data);
+            console.log(data.users)
+            console.log(val);
             person = template(val);
-            
+            console.log(person);
             placeHolder.append(person);
+            // placeHolder.html(person);
         });   
         
         // placeHolder
