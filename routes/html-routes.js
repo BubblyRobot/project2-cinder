@@ -56,15 +56,21 @@ module.exports = function(app) {
 
   app.get("/profilepage", function(req, res) {
     // res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
-    res.render(path.join(__dirname, "../views/index.handlebars"));
+    // res.render(path.join(__dirname, "../views/index.handlebars"));
+    // res.render('index', {
+    //   first_name: 'test1',
+    //   last_name:'test2',
+    //   nickname: 'test3',
+    //   email: 'email'
+    // })
 
-    // db.User.findAll({}).then(
-    // function(data) {
-    //   var hbsObject = {
-    //     users: [data]
-    //   };
-    //   console.log(hbsObject);
-    //   res.render("index", hbsObject);
-    // });
+    db.User.findAll({}).then(
+    function(data) {
+      // var hbsObject = {
+      //   users: [data]
+      // };
+      console.log(data);
+      res.render("index", data);
+    });
   });
 };
