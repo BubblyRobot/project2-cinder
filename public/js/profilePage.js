@@ -1,34 +1,34 @@
 $(document).ready(function() {
-  let codingWebSites = [
-    {
-        name: "Code Wars",
-        link: "https://www.codewars.com"
-    },
-    {
-        name: "Code Conquest",
-        link: "https://www.codeconquest.com"
-    }, 
-    {
-        name: "GA Dash",
-        link: "https://dash.generalassemb.ly/"
-    },
-    {
-        name: "MIT Open Courseware",
-        link: "https://ocw.mit.edu/"
-    },
-    {
-        name: "The Odin Project",
-        link: "https://www.theodinproject.com/"
-    },
-    {
-        name: "Udacity",
-        link: "https://www.udacity.com/"
-    },
-    {
-        name: "SoloLearn",
-        link: "https://www.sololearn.com/"
-    },
-];
+    let codingWebSites = [
+        {
+            name: "Code Wars",
+            link: "https://www.codewars.com"
+        },
+        {
+            name: "Code Conquest",
+            link: "https://www.codeconquest.com"
+        }, 
+        {
+            name: "GA Dash",
+            link: "https://dash.generalassemb.ly/"
+        },
+        {
+            name: "MIT Open Courseware",
+            link: "https://ocw.mit.edu/"
+        },
+        {
+            name: "The Odin Project",
+            link: "https://www.theodinproject.com/"
+        },
+        {
+            name: "Udacity",
+            link: "https://www.udacity.com/"
+        },
+        {
+            name: "SoloLearn",
+            link: "https://www.sololearn.com/"
+        },
+    ];
     let bootCamps = [
         {
         name: "Columbia Engineering Boot Camps",
@@ -92,50 +92,20 @@ $(document).ready(function() {
         pcodingSites.text("Website link");
     } 
 
-
-
-
-    // $.ajax({url: "http://localhost:8080/api/users", success: function(data){
-        
-    //     // $("#div1").html(result);
-    //     console.log(data);
-
-    // }}).then(function(data){
-
-    //     console.log(data)
-
-    // });
-    // console.log("test")
-
-
-
-
-    var source   = $("#person-template").html();
+    var source = `<li class="person-info">
+    <h3>{{nickname}}</h3>
+    <div>
+        <h4>{{first_name}} {{last_name}}</h4>
+        Contact me at: {{email}}<br><br>
+    </div>
+    </li>`;
     var template = Handlebars.compile(source);
     var person = "";
     var placeHolder = $("ul.persons");
-    
-    $.get( "http://localhost:8080/api/users", function( data ) {
-        $.each(data, function(idx, val){
-            console.log(data);
+    $.get("http://localhost:8080/api/users", function (data) {
+        $.each(data, function (idx, val) {
             person = template(val);
-            
             placeHolder.append(person);
-        });   
-        
-        // placeHolder
-        //   // Blast the text apart by word.
-        //   .blast({ delimiter: "word" })
-        //   // Fade the words into view using Velocity.js.
-        //   .velocity("transition.fadeIn", { 
-        //     display: null,
-        //     duration: 100,
-        //     stagger: 50,
-        //     delay: 0
-        //   });
+        });
     });
-    
-    
-
-
 });
