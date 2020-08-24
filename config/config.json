@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "Mypassword1!",
+    "password": "password",
     "database": "cinder_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Mypassword1!",
+    "password": "password",
     "database": "cinder_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
