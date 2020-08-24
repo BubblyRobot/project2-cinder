@@ -49,6 +49,11 @@ module.exports = function (app) {
           res.status(401).json(err);
         });
   });
+// route to get file upload
+
+
+
+
 
   // route to get users list
   app.get("/api/users", function(req, res) {
@@ -58,12 +63,12 @@ module.exports = function (app) {
     db.User.findAll({ 
     }).then(function(data) {
       var hbsObject = {
-        users: data
+        users: [data]
       };
       console.log(hbsObject);
       // res.render("index", hbsObject);
 
-      res.json(hbsObject);
+      res.json(data);
 
     }).catch(err => {
       console.log(err);
@@ -74,21 +79,21 @@ module.exports = function (app) {
   // route for rendering one specific user
   app.get("/api/users/:id", function (req, res) {
 
-    // db.User.findOne({
-    //   where: {
-    //     id: req.params.id
-    //   }
+    db.User.findOne({
+      where: {
+        id: req.params.id
+      }
 
-    // }).then(function(data) {
-    //   var hbsObject = {
-    //     users: data
-    //   };
-    //   console.log(hbsObject);
-    //   res.render("index", hbsObject);
+    }).then(function(data) {
+      var hbsObject = {
+        users: data
+      };
+      console.log(hbsObject);
+      res.render("index", hbsObject);
 
-    // }).catch(err => {
-    //   console.log(err);
-    // });
+    }).catch(err => {
+      console.log(err);
+    });
   });
   // db.User.findAll({}).then(
   //   function(data) {
@@ -135,6 +140,9 @@ module.exports = function (app) {
       //   response.json(place);
       // });
     });
+    
+
+
   });
   app.get("/api/place", function (req, response) {
     
@@ -154,5 +162,9 @@ module.exports = function (app) {
   });
  
     
+
+
+  
+  // cms route loads cms.html
 
 };
