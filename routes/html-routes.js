@@ -24,7 +24,7 @@ module.exports = function(app) {
   
   app.get("/signup", function(req, res) {
     if (req.user) {
-      res.redirect("/profilepage");
+      res.redirect("/questionnaire");
     }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
