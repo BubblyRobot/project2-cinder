@@ -6,7 +6,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">>
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
-	<script src="js/questionnaire.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./js/questionnaire.js"></script>
 	<title>CINDER SIGNUP PAGE</title>
 </head>
 
@@ -23,6 +24,8 @@
 				<input type="Name" placeholder="Update Your Name" id="firstName"/>
 				<input type="Last Name" placeholder="Update Your Last Name" id="lastName"/>
 				<input type="Nick Name" placeholder="Choose a Nick Name" id="nickName"/>
+				<label for="phone">About me:</label>
+				<input type="aboutme" placeholder="Update about me" id="aboutme" name="aboutme">
 				<label for="dob-day" class="control-label">Date of birth</label>
 				<div class="controls" id="controls">
 					<select name="dob-day" id="dobDay">
@@ -194,8 +197,9 @@
 					</div>
 					<br>
 					<label for="phone">Enter your phone number:</label>
-					<input type="tel" id="phoneNumber" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-					<small>Format: 123-456-7890</small>
+					<input type="tel" placeholder="000-00-0000" id="phoneNumber" name="phone">
+					<!-- <input type="tel" id="phoneNumber" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> -->
+					<!-- <small>Format: 123-456-7890</small> -->
 
 					<input type="Work Place" placeholder="Work Place" id="workPlace"/>
 					<select id="jobRole" name="user_job">
@@ -227,7 +231,7 @@
 				</div>
 
 				<div class="controls" id="controls">
-					<select name="work-experience" id="work-experience">
+					<select name="work-experience" id="workExperience">
 						<option value="">How Many Years of Experience You Have</option>
 						<option value="01">01</option>
 						<option value="02">02</option>
@@ -251,39 +255,30 @@
 						<option value="20">20</option>
 				</div>
 				<label class="container-ch"></label>
-				<input type="checkbox">
 				<p>Select programming language you know :</p>
 				<label class="sch-checkbox-item-label-style-5">Ruby
-					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-					<span class="checkmark"></span>
+					<input type="checkbox" id="language1" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
 				</label>
 				<label class="sch-checkbox-item-label-style-5">C++
 					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-					<span class="checkmark"></span>
 				</label>
 				<label class="sch-checkbox-item-label-style-5">Javascript
 					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-					<span class="checkmark"></span>
 				</label>
 				<label class="sch-checkbox-item-label-style-5">Java
 					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-					<span class="checkmark"></span>
 				</label>
 				<label class="sch-checkbox-item-label-style-5">Python
 					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-					<span class="checkmark"></span>
 				</label>
 				<label class="sch-checkbox-item-label-style-5">UI/UX
 					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-					<span class="checkmark"></span>
 				</label>
 				<label class="sch-checkbox-item-label-style-5">PHP
 					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-					<span class="checkmark"></span>
 				</label>
 				<label class="sch-checkbox-item-label-style-5">MYSQL
 					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-					<span class="checkmark"></span>
 				</label>
 					<br>
 					<button id="update" class="btn btn-default" type="submit" value="1">Update</button>
@@ -306,9 +301,6 @@
 			</div>
 		</div>
 	</div>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
-	<script type="text/javascript" src="js/questionnaire.js"></script>
-</body>
+	</body>
 
 </html>
