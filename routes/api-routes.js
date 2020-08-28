@@ -95,32 +95,47 @@ module.exports = function (app) {
       console.log(err);
     });
   });
-  // db.User.findAll({}).then(
-  //   function(data) {
-  //     var hbsObject = {
-  //       users: data
-  //     };
-      // console.log(hbsObject);
-      // console.log(hbsObject.users[0].dataValues);
-      // for (var i = 0; i < users.length; i ++){
-      //   var user = hbsObject.users[i].dataValues;
-      //   res.render("index", {
-      //     first_name: user.first_name,
-      //     last_name: user.last_name
-      //   });
-      // }
-    // });
-  app.put("/api/questionnaire", function(req, res) {
+
+  app.put("/api/questionnaire/:id", function(req, res) {
+    console.log("id: ", req.params.id);
     db.User.update(
       req.body,
       {
         where: {
-          id: req.body.id
+          id: req.params.id
         }
       }).then(function(dbUser) {
       res.json(dbUser);
     });
   });
+  // app.put("/api/questionnaire", function(req, res) {
+  //   db.User.update(
+  //     req.body,
+  //     {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     }).then(function(dbUser) {
+  //     res.json(dbUser);
+  //   });
+  // });
+  
+
+  // Route for getting some data about our user to be used client side
+  app.get("/api/user_data", (req, res) => {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    } else {
+      // Otherwise send back the user's email and id
+      // Sending back a password, even a hashed password, isn't a good idea
+      res.json({
+        email: req.user.email,
+        id: req.user.id
+      });
+    }
+  });
+
   // Route for logging user out
   app.get("/logout", function (req, res) {
     req.logout();
@@ -160,11 +175,5 @@ module.exports = function (app) {
 
 
   });
- 
-    
-
-
-  
-  // cms route loads cms.html
 
 };
