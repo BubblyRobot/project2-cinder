@@ -50,9 +50,6 @@ var storage = multer.diskStorage({
   var upload = multer({ storage: storage })
 
 
-
-
-
 //const upload = multer({dest: __dirname + '/public/img/uploads'});
 // Sets up the Express App
 // =============================================================
