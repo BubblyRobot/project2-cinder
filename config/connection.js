@@ -4,8 +4,12 @@ require("dotenv").config(process.env.PRODUCTION);
 var connection;
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
+  console.log("I'm in the Jawsdb area")
+  
 } else {
+  
   connection = mysql.createConnection(process.env.PRODUCTION);
+  console.log("I'm in the MySQL area")
 }
 
 connection.connect(function(err) {
