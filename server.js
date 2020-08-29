@@ -199,7 +199,7 @@ app.post('/upload', upload.single('photo'), (req, res) => {
 
 // Beginning of Server Stuff ############################################################################
 var PORT = process.env.PORT || 8080;
-const PORT2 = process.env.PORT || 3000;
+const PORT2 = process.env.PORT2 || 3000;
 
 //
 
