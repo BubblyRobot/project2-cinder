@@ -1,3 +1,4 @@
+//Testing one two three
 $(document).ready(function() {
     let codingWebSites = [
         {
@@ -102,7 +103,7 @@ $(document).ready(function() {
     var template = Handlebars.compile(source);
     var person = "";
     var placeHolder = $("ul.persons");
-    $.get("http://localhost:8080/api/users", function (data) {
+    $.get("/api/users", function (data) {
         $.each(data, function (idx, val) {
             person = template(val);
             placeHolder.append(person);
