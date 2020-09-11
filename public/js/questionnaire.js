@@ -21,26 +21,24 @@ $(document).ready(function() {
     $("input#firstName").text(data.first_name);
     
   });
-  var jobRole = [];
-  var language = $('#language :checkbox:checked').map(function() {
-    return $(this).val();
+  
+  var langString = "";
+  $("input[type=checkbox]").click(function(){
+    var language = [];
+    $.each($("input[name='language']:checked"), function(){
+      // console.log($(this).val());
+      language.push($(this).val());
+      langString = language.join(", ")
+    })
+    console.log(langString);
+  })
+  
+  
+  var jobRole;
+  var selectJobRole = $("select#jobRole").change(function(){
+    jobRole = $(this).children("option:selected").val();
   });
 
-  console.log(language);
-  
-  
-  $('optgroup').each(function() {
-    jobRole[this.label] = $(this).find('option').map(function() {
-      
-      return $(this).text();
-      
-    }).get();
-    console.log($(this).text());
-  });
-  
-
-  // console.log(JSON.stringify(jobRole));
-  // console.log(jobRole)
   var selectedMonth;
   var selectedDay;
   var selectedYear;
@@ -50,21 +48,11 @@ $(document).ready(function() {
   var dobDay = $("select#dobDay").change(function(){
     selectedDay = $(this).children("option:selected").val();
    });
-
-
   var dobYear = $("select#dobYear").change(function(){
     selectedYear = $(this).children("option:selected").val();
   });
-
-  // var dob = Date.parse(this.selectedMonth + "/" + this.selectedDay + "/" + this.selectedYear);
-  // console.log(dob);
-  // var dob = selectedYear.toString() + "-" + selectedMonth.toString() + "-" + selectedDay.toString();
-  // console.log("month:", selectedMonth);
-  // console.log(dob);
-
   var workExperience =  $("select#workExperience").change(function(){
     selectedWrkExperience = $(this).children("option:selected").val();
-      
   });
   cancelBtn.on('click', function(event) {
     event.preventDefault();
@@ -75,7 +63,7 @@ $(document).ready(function() {
   updateForm.on('submit', function(event) {
     event.preventDefault();
     var dob = selectedYear.toString() + "-" + selectedMonth.toString() + "-" + selectedDay.toString();
-
+    console.log("the language is ", langString);
     console.log("we hitted submit btn")
     console.log("month:", selectedMonth);
     console.log("day:", selectedDay);
@@ -91,26 +79,16 @@ $(document).ready(function() {
       phone: phoneNumber.val().trim(),
       work_place: workPlace.val().trim(),
       job_role: jobRole,
-      experience: selectedWrkExperience
+      experience: selectedWrkExperience,
+      language: langString
     };
-
     console.log(userData);
     // if ( !userData.first_name || !userData.last_name || !userData.dob ) {
     //   return;
     // }
     // If we have a first name, last name updateForm function will be triggered
     updateUserInfo(userData);
-
   });
-  // Does a post to the questionnaire route. If successful, we are redirected to the profile page. Otherwise we log any errors
-  // function updateUserInfo(user ) {
-  //   $.post("/api/questionnaire", user)
-  //     .then(function(data) {
-  //       window.location.replace("/profilepage");
-  //       // If there's an error, handle it by throwing  an alert
-  //     })
-  //     .catch(handleLoginErr);
-  // }
   function updateUserInfo(user) {
     $.ajax({
       method: "PUT",

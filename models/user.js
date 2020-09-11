@@ -77,6 +77,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     },
     language: {
+      // type: DataTypes.ARRAY(DataTypes.STRING), 
       type: DataTypes.STRING,
       allowNull: true
     }
