@@ -204,7 +204,6 @@
 					<input type="Work Place" placeholder="Work Place" id="workPlace"/>
 					<select id="jobRole" name="user_job">
 						<label for="job">Job Role:</label>
-						<optgroup label="Web">
 							<option value="job-role">Job Role</option>
 							<option value="frontend_developer">Front-End Developer</option>
 							<option value="php_developor">PHP Developer</option>
@@ -212,21 +211,14 @@
 							<option value="rails_developer"> Rails Developer</option>
 							<option value="web_designer">Web Designer</option>
 							<option value="WordPress_developer">WordPress Developer</option>
-						</optgroup>
-						<optgroup label="Mobile">
 							<option value="Android_developer">Androild Developer</option>
 							<option value="iOS_developer">iOS Developer</option>
 							<option value="mobile_designer">Mobile Designer</option>
-						</optgroup>
-						<optgroup label="Business">
 							<option value="business_owner">Business Owner</option>
 							<option value="freelancer">Freelancer</option>
-						</optgroup>
-						<optgroup label="Other">
 							<option value="secretary">Secretary</option>
 							<option value="maintenance">Maintenance</option>
 							<option value="other">Other</option>
-						</optgroup>
 					</select>
 				</div>
 
@@ -253,33 +245,36 @@
 						<option value="18">18</option>
 						<option value="19">19</option>
 						<option value="20">20</option>
+					</select>
 				</div>
-				<label class="container-ch"></label>
-				<p>Select programming language you know :</p>
-				<label class="sch-checkbox-item-label-style-5">Ruby
-					<input type="checkbox" id="language1" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-				</label>
-				<label class="sch-checkbox-item-label-style-5">C++
-					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-				</label>
-				<label class="sch-checkbox-item-label-style-5">Javascript
-					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-				</label>
-				<label class="sch-checkbox-item-label-style-5">Java
-					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-				</label>
-				<label class="sch-checkbox-item-label-style-5">Python
-					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-				</label>
-				<label class="sch-checkbox-item-label-style-5">UI/UX
-					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-				</label>
-				<label class="sch-checkbox-item-label-style-5">PHP
-					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-				</label>
-				<label class="sch-checkbox-item-label-style-5">MYSQL
-					<input type="checkbox" id="checkbox-5-3" name="sch-checkbox-item-5" class="sch-checkbox-item-input-style-5">
-				</label>
+					<label class="container-ch">
+						<p>Select programming language you know :</p>
+					</label>
+					
+					<label class="sch-checkbox-item-label-style-5">Ruby
+						<input type="checkbox" id="checkbox-5-3" value="Ruby" name="language" class="sch-checkbox-item-input-style-5">
+					</label>
+					<label class="sch-checkbox-item-label-style-5">C++
+						<input type="checkbox" id="checkbox-5-3" value="C++" name="language" class="sch-checkbox-item-input-style-5">
+					</label>
+					<label class="sch-checkbox-item-label-style-5">Javascript
+						<input type="checkbox" id="checkbox-5-3" value="Javascript" name="language" class="sch-checkbox-item-input-style-5">
+					</label>
+					<label class="sch-checkbox-item-label-style-5">Java
+						<input type="checkbox" id="checkbox-5-3" value="Java" name="language" class="sch-checkbox-item-input-style-5">
+					</label>
+					<label class="sch-checkbox-item-label-style-5">Python
+						<input type="checkbox" id="checkbox-5-3" value="Python" name="language" class="sch-checkbox-item-input-style-5">
+					</label>
+					<label class="sch-checkbox-item-label-style-5">UI/UX
+						<input type="checkbox" id="checkbox-5-3" value="UI/UX" name="language" class="sch-checkbox-item-input-style-5">
+					</label>
+					<label class="sch-checkbox-item-label-style-5">PHP
+						<input type="checkbox" id="checkbox-5-3" value="PHP" name="language" class="sch-checkbox-item-input-style-5">
+					</label>
+					<label class="sch-checkbox-item-label-style-5">MYSQL
+						<input type="checkbox" id="checkbox-5-3" value="MYSQL" name="language" class="sch-checkbox-item-input-style-5">
+					</label>
 					<br>
 					<button id="update" class="btn btn-default" type="submit" value="1">Update</button>
 					<button id="cancel" class="btn btn-default" type="reset" value="0">Cancel</button>
