@@ -17,6 +17,9 @@ Search through our database and find hundreds of interesting articles.
 2. Connect Coders to each other 
 3. Create database and searching engine
 
+## About 
+"Social Networking site for Coding students and Grads Find fellow coders to chat, friend, and work on projects. Express, Socket.io, MySql, Passport, Handlebars, Bulma, Sequelize, Google API."
+
 ##Concept
 Create application that save users information in database, connect them to each other and provide them searching engine so they can look for interesting topics.
 
