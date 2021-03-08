@@ -10,7 +10,7 @@ $(document).ready(function() {
   var aboutme = $("input#aboutme");
   var id;
   var selectedWrkExperience;
-  var cancelBtn = $("input#cancel");
+  var cancelBtn = $("#cancel");
   // var url = window.location.search;
 
   // This file does a GET request to figure out which user is logged in
